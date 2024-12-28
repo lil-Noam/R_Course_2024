@@ -1,7 +1,9 @@
 # R_Course_2024
 
+This is a general practice for making README files
+
 ![this is DITTO](https://www.serebii.net/anime/shiny/ditto.jpg) <br>
-This is my favorite pokemon Ditto together with its shiny version. <br>It has nothing to do with the stroop task, it just makes me happy :)
+This is my favorite pokemon Ditto together with its shiny version. <br>It has nothing to do with the course, it just makes me happy :)
 
 ## Purpose
 This repository is used to save and track TAU R course homework 2024-2025
