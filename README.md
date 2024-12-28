@@ -1,2 +1,4 @@
 # R_Course_2024
-TAU R course homework etc. 2024-2025
+
+This repository is used to save and track TAU R course homework 2024-2025
+
