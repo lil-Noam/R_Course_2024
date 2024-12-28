@@ -1,7 +1,6 @@
 .Rhistory
 .DS_Store
 .Rproj
-stroop_data
 *.csv
 *.xlsx
 *.pdf
