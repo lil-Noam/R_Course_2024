@@ -1,3 +1,7 @@
+# this code was written by Noam Gabay (AKA lil-noam) on December 20th 2024
+# it is made to run basic descriptive statistics on the filtered data
+# and make some basic plots (scatter and bar)
+
 
 ### descriptive statistics ----
 

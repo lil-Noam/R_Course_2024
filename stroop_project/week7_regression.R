@@ -1,3 +1,8 @@
+# this code was written by Noam Gabay (AKA lil-noam) on December 20th 2024
+# it is made to fit to the stroop data a linear regression model
+# that includes the task performed, the congruency of color to word
+# and their interaction
+
 
 ### regression ----
 

@@ -1,6 +1,7 @@
-# R course for beginners
-# Week 7
-# assignment by Noam Gabay, id 208540815
+# this code was written by Noam Gabay (AKA lil-noam) on December 20th 2024
+# it is made to preprocess the raw stroop data,
+# filter it using piping and save the filtered data
+
 
 
 ### preprocessing ----
