@@ -1,6 +1,5 @@
 .Rhistory
 .DS_Store
 .Rproj
-*.csv
 *.xlsx
 *.pdf
