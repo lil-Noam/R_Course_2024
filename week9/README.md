@@ -1,14 +1,9 @@
-# R_Course_2024
 
-This is a general practice for making README files
-
-![this is DITTO](https://www.serebii.net/anime/shiny/ditto.jpg) <br>
-This is my favorite pokemon Ditto together with its shiny version. <br>It has nothing to do with the course, it just makes me happy :)
-
-## Purpose
-This repository is used to save and track TAU R course homework 2024-2025
-
-### This is a code box
-```r
-# this is an R code
-print("Finally someone teaches me how to use this git thing!")
+This week on R course we learned about functions.
+<br> <br>
+This folder contains two files - analysis and functions <br><br>
+functions.R contains the function descriptive_stats: <br>
+input: a dataframe and two numerical variables, start and end (default valued as 1 and the length of the dataframe) <br>
+output: a dataframe of basic descriptive summary of each column. for categorical variables it returns the number of samples from each category. for numerical variables it returns the minimum, maximum and mean values.
+<br><br>
+analysis.R 
