@@ -30,7 +30,11 @@ df = data.frame(subject_id, age, gender, avg_rt_ms, depression, avg_sleep_durati
 
 #### USE FUNCTION ----
 
-source(paste(getwd(),"/project/week9_functions.R", sep = ""))
+# change path as needed
+path = paste(getwd(),"/project/week9/week9_functions.R", sep = "")
+
+# load path
+source(path)
 
 print("analysis of the full data:")
 print(descriptive_stats(df))

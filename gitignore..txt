@@ -1,5 +1,5 @@
 .Rhistory
 .Rproj
-collected_data 
+subject_data 
 *.xlsx
 *.pdf
