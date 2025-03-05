@@ -16,8 +16,7 @@ Dataset columns (features):<br>
 * **Subject**: subject id (chr)
 * **Movie**: movie id (chr)
 * **pupil_size**: difference in average pupil size from 1st to 2nd viewing (num)
-* **MEGA_score**: (num) metric for quantifying anticipatory gaze: normalized difference between GAD of 1st and 2nd viewing. computed as: <br>
-$` \frac{GAD_{1st}-GAD_{2nd}}{max{GAD_{1st}, GAD{2nd}}} `$$
+* **MEGA_score**: (num) metric for quantifying anticipatory gaze: normalized difference between GAD of 1st and 2nd viewing. computed as: $` \frac{GAD_{1st}-GAD_{2nd}}{max{GAD_{1st}, GAD{2nd}}} `$ <br>
 * **memorysource**: categorical value based on verbal reports: *event_memory*, *scenery memory* or *no_memory* (chr)
 * **recognition_accuracy**: context recognition according to participant's response (num)
 * **what_accuracy**: object recognition according to participant's response (num)
