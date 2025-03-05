@@ -24,14 +24,14 @@ $` \frac{GAD_{1st}-GAD_{2nd}}{max{GAD_{1st}, GAD{2nd}}} `$$
 * **where_accuracy_liberal**: event location recall according to participant's response (num)
 * **when_accuracy**: temporal recall according to participant's response (num)
 
-<br>
+
 ### Why I chose this dataset
 
 * I think it is an interesting, promising paradigm that could help advance clinical research in unverbal patients. <br>
 * To have this work be meaningful and contribute to my lab mates' project <br>
 * It's a nice opportunity to experience what the human researchers in my lab do
 
-<br>
+
 ### Research Questions
 
 * Can MEGA score predict episodic (event) memory non-verbally? <br>
