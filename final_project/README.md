@@ -94,6 +94,7 @@ To answer the second question - linear regression: MEGA memory ~ Movie
 ![Linear regression result - movie coefficients ordered by absolute value](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/feature_importance.jpeg)
 
 <br>
+
 ### 4.ROC CURVE:
 
 #### ROC curve of the logistic regression
