@@ -16,8 +16,8 @@ Dataset columns (features):<br>
 * **Subject**: subject id (chr)
 * **Movie**: movie id (chr)
 * **pupil_size**: difference in average pupil size from 1st to 2nd viewing (num)
-* **MEGA_score**: metric for quantifying anticipatory gaze: normalized difference between GAD of 1st and 2nd viewing. computed as:
-$$` \frac(GAD_(1st)-GAD_(2nd))(max(GAD_(1st), GAD(2nd))) `$$ (num)
+* **MEGA_score**: (num) metric for quantifying anticipatory gaze: normalized difference between GAD of 1st and 2nd viewing. computed as: <br>
+$` \frac{GAD_{1st}-GAD_{2nd}}{max{GAD_{1st}, GAD{2nd}}} `$$
 * **memorysource**: categorical value based on verbal reports: *event_memory*, *scenery memory* or *no_memory* (chr)
 * **recognition_accuracy**: context recognition according to participant's response (num)
 * **what_accuracy**: object recognition according to participant's response (num)
@@ -33,9 +33,9 @@ $$` \frac(GAD_(1st)-GAD_(2nd))(max(GAD_(1st), GAD(2nd))) `$$ (num)
 * It's a nice opportunity to experience what the human researchers in my lab do
 
 <br>
-### Research Questions: <br>
-* Can MEGA score predict episodic (event) memory non-verbally?
-* Which movie clips have the strongest anticipatory gaze effect, i.e which movies contribute most to MEGA score?
+### Research Questions:
+* Can MEGA score predict episodic (event) memory non-verbally? <br>
+* Which movie clips have the strongest anticipatory gaze effect, i.e which movies contribute most to MEGA score? <br>
 * Can we run the experiment in shorter time, using less movies, and still get the same effect?
 
 <br>
@@ -66,7 +66,7 @@ $$` \frac(GAD_(1st)-GAD_(2nd))(max(GAD_(1st), GAD(2nd))) `$$ (num)
 
 ## Step C - Data Analysis
 
-### 1. MY Regressions:
+### 1. My Regressions:
 To answer the first question - logistic regression: event_memory ~ scaled MEGA score <br>
 To answer the second question - linear regression: MEGA memory ~ Movie
 <br>
@@ -89,13 +89,15 @@ To answer the second question - linear regression: MEGA memory ~ Movie
 
 ### 3. GRAPHS:
 
+#### Logistic regression result - MEGA Z vs probability of event memory with true labels
 ![Logistic regression result - MEGA Z vs probability of event memory with true labels](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/LogPlot.jpeg)
 
-
-![Linear regression result - movie coefficients ordered by absolute value ](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/feature_importance.jpeg)
+#### Linear regression result - movie coefficients ordered by absolute value
+![Linear regression result - movie coefficients ordered by absolute value](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/feature_importance.jpeg)
 
  <br><br>
 
 ### 4.ROC CURVE:
 
+#### ROC curve of the logistic regression
 ![ROC curve of the logistic regression](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/ROC_curve_log_result.jpeg)
