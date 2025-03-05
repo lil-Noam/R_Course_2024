@@ -25,7 +25,6 @@ $` \frac{GAD_{1st}-GAD_{2nd}}{max{GAD_{1st}, GAD{2nd}}} `$$
 * **when_accuracy**: temporal recall according to participant's response (num)
 
 <br>
-
 ### Why I chose this dataset
 
 * I think it is an interesting, promising paradigm that could help advance clinical research in unverbal patients. <br>
@@ -33,7 +32,7 @@ $` \frac{GAD_{1st}-GAD_{2nd}}{max{GAD_{1st}, GAD{2nd}}} `$$
 * It's a nice opportunity to experience what the human researchers in my lab do
 
 <br>
-### Research Questions:
+### Research Questions
 
 * Can MEGA score predict episodic (event) memory non-verbally? <br>
 * Which movie clips have the strongest anticipatory gaze effect, i.e which movies contribute most to MEGA score? <br>
