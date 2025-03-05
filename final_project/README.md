@@ -40,7 +40,13 @@ Research Questions: <br>
 
 ### some EDA
 
-~ add multiplots and scatter plots here ~
+![Scatter plot of event memory and MEGA by movie](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/MEGA%20by%20movie.jpeg?raw=true)
+
+![Scatter plot of event memory and MEGA by subject](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/MEGA%20by%20subject.jpeg?raw=true)
+
+![Box plot of event memory and MEGA by Movie](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/Multiple%20Subplots%20by%20movie.jpeg?raw=true)
+
+![Box plot of event memory and MEGA by subject](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/Multiple%20Subplots%20by%20subject.jpeg?raw=true)
 
 
 
