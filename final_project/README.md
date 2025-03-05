@@ -65,31 +65,38 @@ Research Questions: <br>
 
 ## Step C - Data Analysis
 
-1. To answer the first question - logistic regression: event_memory ~ scaled MEGA score
+1. To answer the first question - logistic regression: event_memory ~ scaled MEGA score <br>
 To answer the second question - linear regression: MEGA memory ~ Movie
 
 <br><br>
 
 2. Result interpretation:
 <br>
-Logistic model:
-* Random effect for Subject (Intercept): Standard deviation of 0.4818, showing variability in baseline odds across subjects.
-* Intercept $`\beta_0`$ (-0.9148): represents the log-odds of the event memory when MEGA_score is 0 for an average subject (i.e., ignoring the random effects). Applying the logistic function on the intercept results in the probability of the event being remembered to be about 28.6%.
-* MEGA_score $`\beta_1`$ (2.0979): For every one-unit increase in MEGA_score, the log-odds of the event happening increase by 2.0979, meaning that as MEGA_score increases, the probability of the movie being remembered (event_memory = 1) increases. By converting log-odds to odd ratio we get that for every one-unit increase in MEGA_score, the odds of the movie to being remembered (compared to not being remembered) increase by approximately 8.14 times.
+
+Logistic model: <br>
+* Random effect for Subject (Intercept): Standard deviation of 0.4818, showing variability in baseline odds across subjects. <br>
+* Intercept $`\beta_0`$ (-0.9148): represents the log-odds of the event memory when MEGA_score is 0 for an average subject (i.e., ignoring the random effects). Applying the logistic function on the intercept results in the probability of the event being remembered to be about 28.6%.<br>
+* MEGA_score $`\beta_1`$ (2.0979): For every one-unit increase in MEGA_score, the log-odds of the event happening increase by 2.0979, meaning that as MEGA_score increases, the probability of the movie being remembered (event_memory = 1) increases. By converting log-odds to odd ratio we get that for every one-unit increase in MEGA_score, the odds of the movie to being remembered (compared to not being remembered) increase by approximately 8.14 times. <br>
 * AUC: 0.6866: This indicates the model’s ability to discriminate between the two classes (memory vs. no memory). An AUC of 0.6866 indicated some discrimination (as it is greater than 0.5) but could likely be improved.
 
-<br>
+<br><br>
 
-Linear model:
-* No intercept - I removed the intercept from the model to avoid R choosing one movie as a reference level. Instead, the reference is just 0. I tried to use a mixed model with random intercept for each subject, but the sd was so small that it seemed insignificant to include it.
-* Fixed Effects: Each movie has a coefficient showing its effect on MEGA_memory (the goodness of fit between the MEGA score and the memory report): positive coefficients (e.g., Moviemov25 = 0.717) indicate an increase in this fit, while negative coefficients (e.g., Moviemov57 = -0.352) indicate a decrease in it.
+Linear model: <br>
+* No intercept - I removed the intercept from the model to avoid R choosing one movie as a reference level. Instead, the reference is just 0. I tried to use a mixed model with random intercept for each subject, but the sd was so small that it seemed insignificant to include it. <br> 
+* Fixed Effects: Each movie has a coefficient showing its effect on MEGA_memory (the goodness of fit between the MEGA score and the memory report): positive coefficients (e.g., Moviemov25 = 0.717) indicate an increase in this fit, while negative coefficients (e.g., Moviemov57 = -0.352) indicate a decrease in it. <br>
 * Residual: The residual standard deviation is 0.9842, indicating some variability in the data that the model hasn't accounted for.
 
+<br><br>
 
 3. GRAPHS:
 
-~add here~
+![Logistic regression result - MEGA Z vs probability of event memory with true labels](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/LogPlot.jpeg)
 
-4.ROC GRAPH:
 
-~add here~
+![Linear regression result - movie coefficients ordered by absolute value ](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/feature_importance.jpeg)
+
+ <br><br>
+
+4.ROC CURVE:
+
+![ROC curve of the logistic regression](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/ROC_curve_log_result.jpeg)
