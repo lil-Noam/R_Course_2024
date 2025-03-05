@@ -1,7 +1,15 @@
 # R Course Final Project
 
-by Noam Gabay ID 208540815 <br><br>
+#### by Noam Gabay, ID 208540815
 
+© 2024 Nir Lab, Tau. All rights reserved.  <br>
+Special thanks to Dr. Flavio J. Schmidig for allowing me to use his data. <br><br>
+
+This project includes 3 files: <br>
+1. preprocess_EDA.R - preprocessing of the data and exploratory data analysis.
+2. analysis.R - implementation of helper functions and the regression analyses.
+3. top_features_modeling.R - logistic regression analysis of the filtered data according to the feature selection process done in the linear regression.
+ <br><br>
 
 ## Step A - Defining the Research Question
 
@@ -95,7 +103,7 @@ To answer the second question - linear regression: MEGA memory ~ Movie
 
 <br>
 
-### 4.ROC CURVE:
+### 4. ROC CURVE:
 
 #### ROC curve of the logistic regression
 ![ROC curve of the logistic regression](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/ROC_curve_log_result.jpeg)
