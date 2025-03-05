@@ -25,20 +25,20 @@ $$` \frac(GAD_(1st)-GAD_(2nd))(max(GAD_(1st), GAD(2nd))) `$$ (num)
 * **when_accuracy**: temporal recall according to participant's response (num)
 
 <br>
-Why I chose this dataset:
-* I think it is an interesting, promising paradigm that could help advance clinical research in unverbal patients.
-* To have this work be meaningful and contribute to my lab mates' project
+### Why I chose this dataset: <br>
+* I think it is an interesting, promising paradigm that could help advance clinical research in unverbal patients. <br>
+* To have this work be meaningful and contribute to my lab mates' project <br>
 * It's a nice opportunity to experience what the human researchers in my lab do
 
 <br>
-Research Questions: <br>
+### Research Questions: <br>
 * Can MEGA score predict episodic (event) memory non-verbally?
 * Which movie clips have the strongest anticipatory gaze effect, i.e which movies contribute most to MEGA score?
 * Can we run the experiment in shorter time, using less movies, and still get the same effect?
 
 <br><br>
 
-### some EDA
+## some EDA
 
 ![Scatter plot of event memory and MEGA by movie](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/MEGA%20by%20movie.jpeg)
 
@@ -52,7 +52,7 @@ Research Questions: <br>
 
 ## Step B - Preprocessing the Data
 
-1. Needed variables for analysis: <br>
+### 1. Needed variables for analysis: <br>
 * **Subject**: (chr) subject ID, no change from the original data. Random effect in mixed model - we'd like to set a random intercept for each subject to account for inter-subject differences.
 * **Movie**: (factor) movie ID. Predictive variables for the linear regressions. We Movie names were changed to include 5 characters each (mov01 and not mov1) so that they can be sorted alphabetically. Movies that no subject remembered and movies that all  We also add a dummy variable for each movie by using one-hot encoding: if a sample is taken from a specific movie its dummy value would be 1 while all the other movies' dummy values would be 0.
 * **MEGA_score**: (num) MEGA score, computed as mentioned above, no change from original data. Used as a predicted variable in one linear regressions and predictive varible in one logistic regression.
@@ -62,14 +62,13 @@ Research Questions: <br>
 
 
 
-
 ## Step C - Data Analysis
 
 1. To answer the first question - logistic regression: event_memory ~ scaled MEGA score <br>
 To answer the second question - linear regression: MEGA memory ~ Movie
 <br>
 
-2. Result interpretation:
+2. ### Result interpretation:
 
 #### Logistic model: <br>
 * **Random effect for Subject (Intercept)**: Standard deviation of 0.4818, showing variability in baseline odds across subjects. <br>
@@ -85,7 +84,7 @@ To answer the second question - linear regression: MEGA memory ~ Movie
 
 <br><br>
 
-3. GRAPHS:
+### 3. GRAPHS:
 
 ![Logistic regression result - MEGA Z vs probability of event memory with true labels](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/LogPlot.jpeg)
 
@@ -94,6 +93,6 @@ To answer the second question - linear regression: MEGA memory ~ Movie
 
  <br><br>
 
-4.ROC CURVE:
+### 4.ROC CURVE:
 
 ![ROC curve of the logistic regression](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/ROC_curve_log_result.jpeg)
