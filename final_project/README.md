@@ -25,7 +25,9 @@ $$` \frac(GAD_(1st)-GAD_(2nd))(max(GAD_(1st), GAD(2nd))) `$$ (num)
 * **when_accuracy**: temporal recall according to participant's response (num)
 
 <br>
-### Why I chose this dataset: <br>
+
+### Why I chose this dataset
+
 * I think it is an interesting, promising paradigm that could help advance clinical research in unverbal patients. <br>
 * To have this work be meaningful and contribute to my lab mates' project <br>
 * It's a nice opportunity to experience what the human researchers in my lab do
@@ -36,7 +38,7 @@ $$` \frac(GAD_(1st)-GAD_(2nd))(max(GAD_(1st), GAD(2nd))) `$$ (num)
 * Which movie clips have the strongest anticipatory gaze effect, i.e which movies contribute most to MEGA score?
 * Can we run the experiment in shorter time, using less movies, and still get the same effect?
 
-<br><br>
+<br>
 
 ## some EDA
 
@@ -64,11 +66,12 @@ $$` \frac(GAD_(1st)-GAD_(2nd))(max(GAD_(1st), GAD(2nd))) `$$ (num)
 
 ## Step C - Data Analysis
 
-1. To answer the first question - logistic regression: event_memory ~ scaled MEGA score <br>
+### 1. MY Regressions:
+To answer the first question - logistic regression: event_memory ~ scaled MEGA score <br>
 To answer the second question - linear regression: MEGA memory ~ Movie
 <br>
 
-2. ### Result interpretation:
+### 2. Result interpretation:
 
 #### Logistic model: <br>
 * **Random effect for Subject (Intercept)**: Standard deviation of 0.4818, showing variability in baseline odds across subjects. <br>
