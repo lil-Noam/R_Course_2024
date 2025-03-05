@@ -5,10 +5,12 @@
 © 2024 Nir Lab, Tau. All rights reserved.  <br>
 Special thanks to Dr. Flavio J. Schmidig for allowing me to use his data. <br><br>
 
-This project includes 3 files: <br>
+This project includes 4 files: <br>
 1. preprocess_EDA.R - preprocessing of the data and exploratory data analysis.
 2. analysis.R - implementation of helper functions and the regression analyses.
 3. top_features_modeling.R - logistic regression analysis of the filtered data according to the feature selection process done in the linear regression.
+4. RF_RFE.R - to test my idea of feature selection by linear regression, I used more conventional ways of feature importance and selection - first by a recursive elimination model and then by random forest model.
+
  <br><br>
 
 ## Step A - Defining the Research Question
@@ -107,3 +109,53 @@ To answer the second question - linear regression: MEGA memory ~ Movie
 
 #### ROC curve of the logistic regression
 ![ROC curve of the logistic regression](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/ROC_curve_log_result.jpeg)
+
+
+## Final test: Logistic regression analysis of the selected movies only
+
+### TOP 10 movies
+
+#### Logistic regression fit
+![Logistic regression result - MEGA Z vs probability of event memory with true labels](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/LogPlot_top10.jpeg)
+
+#### ROC curve
+![Linear regression result - movie coefficients ordered by absolute value](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/ROC_curve_top10.jpeg)
+
+<br>
+
+### TOP 7 movies
+
+#### Logistic regression fit
+![Logistic regression result - MEGA Z vs probability of event memory with true labels](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/LogPlot_top7.jpeg)
+
+#### ROC curve
+![Linear regression result - movie coefficients ordered by absolute value](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/ROC_curve_top7.jpeg)
+
+<br>
+
+### TOP 5 movies
+
+#### Logistic regression fit
+![Logistic regression result - MEGA Z vs probability of event memory with true labels](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/LogPlot_top5.jpeg)
+
+#### ROC curve
+![Linear regression result - movie coefficients ordered by absolute value](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/ROC_curve_top5.jpeg)
+
+<br>
+
+
+### TOP 3 movies
+
+#### Logistic regression fit
+![Logistic regression result - MEGA Z vs probability of event memory with true labels](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/LogPlot_top3.jpeg)
+
+#### ROC curve
+![Linear regression result - movie coefficients ordered by absolute value](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/ROC_curve_top3.jpeg)
+
+<br><br>
+
+### Conclusions
+
+* MEGA score is a fairly good predictor of episodic memory, out model managed to classify the data with higher accuracy than random classifier. <br>
+* The movies that have the best anticipatory gaze effect are (by this order): #27, #25, #35, #60, #58, #14, #10, #01, #03, #36. <br>
+* In all subsets of movies (3, 7, 5 and 10 top movies) AUC is greater than the AUC of the original full set of movies, therefore, we can run the experiment on a smaller subset of movies and still get a strong effect. <br>

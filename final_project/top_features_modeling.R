@@ -15,9 +15,8 @@ top_n = function(linear_model, df, num_features) {
 
 top3 = top_n(linear_model, df, 3)
 top5 = top_n(linear_model, df, 5)
+top7 = top_n(linear_model, df, 7)
 top10 = top_n(linear_model, df, 10)
-
-
 
 
 
@@ -26,10 +25,11 @@ top10 = top_n(linear_model, df, 10)
 save_roc(top3)
 ggsave("LogPlot_top3.jpeg", plot = top3$Logistic_Plot, width = 14, height = 10, dpi = 300)
 
-
 save_roc(top5)
 ggsave("LogPlot_top5.jpeg", plot = top5$Logistic_Plot, width = 14, height = 10, dpi = 300)
 
+save_roc(top7)
+ggsave("LogPlot_top7.jpeg", plot = top7$Logistic_Plot, width = 14, height = 10, dpi = 300)
 
 save_roc(top10)
 ggsave("LogPlot_top10.jpeg", plot = top10$Logistic_Plot, width = 14, height = 10, dpi = 300)

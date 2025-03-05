@@ -129,7 +129,3 @@ df = df |>
 # make dummy variable for each movie
 dummy_dict = model.matrix(~ Movie - 1, data = df)
 df = cbind(df, dummy_dict)
-
-
-saveRDS(df, file = "df.rds")
-

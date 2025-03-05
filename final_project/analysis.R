@@ -6,10 +6,6 @@ library(dplyr)
 # set path
 setwd('C:\\Users\\user\\Documents\\GitHub\\R_Course_2024\\final_project')
 
-# Load the data from an RDS file
-# df = readRDS("df.rds")
-
-
 
 ### helper functions for regressions ----
 
