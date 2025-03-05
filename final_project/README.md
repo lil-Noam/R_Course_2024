@@ -34,6 +34,7 @@ $` \frac{GAD_{1st}-GAD_{2nd}}{max{GAD_{1st}, GAD{2nd}}} `$$
 
 <br>
 ### Research Questions:
+
 * Can MEGA score predict episodic (event) memory non-verbally? <br>
 * Which movie clips have the strongest anticipatory gaze effect, i.e which movies contribute most to MEGA score? <br>
 * Can we run the experiment in shorter time, using less movies, and still get the same effect?
@@ -78,14 +79,13 @@ To answer the second question - linear regression: MEGA memory ~ Movie
 * **Intercept $`\beta_0`$ (-0.9148)**: represents the log-odds of the event memory when MEGA_score is 0 for an average subject (i.e., ignoring the random effects). Applying the logistic function on the intercept results in the probability of the event being remembered to be about 28.6%.<br>
 * **MEGA_score $`\beta_1`$ (2.0979)**: For every one-unit increase in MEGA_score, the log-odds of the event happening increase by 2.0979, meaning that as MEGA_score increases, the probability of the movie being remembered (event_memory = 1) increases. By converting log-odds to odd ratio we get that for every one-unit increase in MEGA_score, the odds of the movie to being remembered (compared to not being remembered) increase by approximately 8.14 times. <br>
 * **AUC: 0.6866**: This indicates the model’s ability to discriminate between the two classes (memory vs. no memory). An AUC of 0.6866 indicated some discrimination (as it is greater than 0.5) but could likely be improved.
-<br>
 
 #### Linear model: <br>
 * **No intercept** - I removed the intercept from the model to avoid R choosing one movie as a reference level. Instead, the reference is just 0. I tried to use a mixed model with random intercept for each subject, but the sd was so small that it seemed insignificant to include it. <br> 
 * **Fixed Effects**: Each movie has a coefficient showing its effect on MEGA_memory (the goodness of fit between the MEGA score and the memory report): positive coefficients (e.g., Moviemov25 = 0.717) indicate an increase in this fit, while negative coefficients (e.g., Moviemov57 = -0.352) indicate a decrease in it. <br>
 * **Residual**: The residual standard deviation is 0.9842, indicating some variability in the data that the model hasn't accounted for.
 
-<br><br>
+<br>
 
 ### 3. GRAPHS:
 
@@ -95,8 +95,7 @@ To answer the second question - linear regression: MEGA memory ~ Movie
 #### Linear regression result - movie coefficients ordered by absolute value
 ![Linear regression result - movie coefficients ordered by absolute value](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/feature_importance.jpeg)
 
- <br><br>
-
+<br>
 ### 4.ROC CURVE:
 
 #### ROC curve of the logistic regression
