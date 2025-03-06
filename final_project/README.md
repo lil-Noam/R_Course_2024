@@ -157,7 +157,7 @@ To answer the second question - linear regression: MEGA memory ~ Movie
 ## Conclusions
 
 * MEGA score is a fairly good predictor of episodic memory, out model managed to classify the data with higher accuracy than random classifier. <br>
-* The movies that have the best anticipatory gaze effect are (by this order): #27, #25, #35, #60, #58, #14, #10, #01, #03, #36. <br>
+* The movies that have the best anticipatory gaze effect are (by this order): #27, #25, #35, #60, #58, #14, #10, #01, #03, #36. Logistic regression on top 3 movies had the highest AUC but as it reduces the samples significantly we chose the second best fit of top 10 movies. <br>
 * In all subsets of movies (3, 7, 5 and 10 top movies) AUC is greater than the AUC of the original full set of movies, therefore, we can run the experiment on a smaller subset of movies and still get a strong effect. <br>
 
 
