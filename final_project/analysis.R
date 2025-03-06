@@ -103,6 +103,9 @@ feature_importance = function(model) {
 
 feature_selection = function(coef_df, num_features=10) {
   
+  # in our case we want the movies that increase match between MEGA and memory
+  # therefore we only want the movies with positive coefficient
+  
   features = coef_df |>
     filter(Sign=='Positive')
   

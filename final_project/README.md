@@ -9,7 +9,7 @@ This project includes 4 files: <br>
 1. preprocess_EDA.R - preprocessing of the data and exploratory data analysis.
 2. analysis.R - implementation of helper functions and the regression analyses.
 3. top_features_modeling.R - logistic regression analysis of the filtered data according to the feature selection process done in the linear regression.
-4. RF_RFE.R - to test my idea of feature selection by linear regression, I used more conventional ways of feature importance and selection - first by a recursive elimination model and then by random forest model.
+4. RF_RFE.R - to test my idea of feature importance/selection by linear regression, I used more conventional ways of feature importance and selection - first by a recursive elimination model and then by random forest model, using libraries we haven't used in the course.
 
  <br><br>
 
@@ -20,14 +20,14 @@ This project includes 4 files: <br>
 
 The dataset used for this project belongs to Nir Lab @TAU and was collected as part of an ongoing study aiming to assess memory retrieval without relying on verbal reports. ([Anticipatory Eye Gaze as a Marker of Memory: Preprint](https://www.biorxiv.org/content/10.1101/2024.08.14.607869v1)). <br>
 
-The data contains samples from 30 paticipants who watched 48 short movie clips (3–26 seconds long), each containing a predefined surprising event occurring at a specific time and location. Participants viewed these movies twice, with a break in between, while their eye movements were recorded using an eye-tracking system, computing the Gaze Distance (GAD) — the mean distance from each gaze point to the event location from the movie’s beginning until the event onset. After the second viewing, verbal memory reports were collected. <br>
+The data contains samples from 30 paticipants who watched 48 short movie clips (8.4-22.4 seconds long), each containing a predefined surprising event occurring at a specific time and location. Participants viewed these movies twice, with a break in between, while their eye movements were recorded using an eye-tracking system, computing the Gaze Distance (GAD) — the mean distance from each gaze point to the event location from the movie’s beginning until the event onset. After the second viewing, verbal memory reports were collected. On the second viewing, besides the 48 movies, participants were presented with 12 lure movies which were shown only on the second viewing and are not included in the dataset. <br>
 
 Dataset columns (features):<br>
 * **Subject**: subject id (chr)
 * **Movie**: movie id (chr)
-* **pupil_size**: difference in average pupil size from 1st to 2nd viewing (num)
-* **MEGA_score**: (num) metric for quantifying anticipatory gaze: normalized difference between GAD of 1st and 2nd viewing. computed as: $` \frac{GAD_{1st}-GAD_{2nd}}{max{GAD_{1st}, GAD{2nd}}} `$ <br>
-* **memorysource**: categorical value based on verbal reports: *event_memory*, *scenery memory* or *no_memory* (chr)
+* **pupil_size**: (num) normalized increased pupil dilation due to repeated memory viewing, computed as:  $` \frac{pupil size_{1st}-pupil size_{2nd}}{max(pupil size_{1st}, pupil size{2nd})} `$ 
+* **MEGA_score**: (num) metric for quantifying anticipatory gaze: normalized difference between GAD of 1st and 2nd viewing. computed as: $` \frac{GAD_{1st}-GAD_{2nd}}{max(GAD_{1st}, GAD{2nd})} `$ <br>
+* **memorysource**: (chr) categorical value based on participant's responses: **no_memory** (if recognition_accuracy is wrong), **scenery memory** (if recognition_accuracy is correct + what_ or where_accuracy is wrong) and **event memory** if all three are correct (recognition, what & where).
 * **recognition_accuracy**: context recognition according to participant's response (num)
 * **what_accuracy**: object recognition according to participant's response (num)
 * **where_accuracy_liberal**: event location recall according to participant's response (num)
@@ -111,7 +111,7 @@ To answer the second question - linear regression: MEGA memory ~ Movie
 ![ROC curve of the logistic regression](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/ROC_curve_log_result.jpeg)
 
 
-## Final test: Logistic regression analysis of the selected movies only
+## Logistic regression analysis of the selected movies only
 
 ### TOP 10 movies
 
@@ -154,8 +154,18 @@ To answer the second question - linear regression: MEGA memory ~ Movie
 
 <br><br>
 
-### Conclusions
+## Conclusions
 
 * MEGA score is a fairly good predictor of episodic memory, out model managed to classify the data with higher accuracy than random classifier. <br>
 * The movies that have the best anticipatory gaze effect are (by this order): #27, #25, #35, #60, #58, #14, #10, #01, #03, #36. <br>
 * In all subsets of movies (3, 7, 5 and 10 top movies) AUC is greater than the AUC of the original full set of movies, therefore, we can run the experiment on a smaller subset of movies and still get a strong effect. <br>
+
+
+## Testing my results using other feature importance/selection methods
+
+I tested my idea of using linear regression for feature importance by comparing it to two other popular methods for feature importance - recursive feature elimination and random forest. <br>
+
+Below is a plot of all features ranked by importance in both our regression model and the forest model: <br>
+
+![Linear regression result - movie coefficients ordered by absolute value](https://github.com/lil-Noam/R_Course_2024/blob/main/final_project/method_comparison.jpeg)
+
