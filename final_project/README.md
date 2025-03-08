@@ -25,8 +25,8 @@ The data contains samples from 30 paticipants who watched 48 short movie clips (
 Dataset columns (features):<br>
 * **Subject**: subject id (chr)
 * **Movie**: movie id (chr)
-* **pupil_size**: (num) normalized increased pupil dilation due to repeated memory viewing, computed as:  $` \frac{pupil size_{1st}-pupil size_{2nd}}{max(pupil size_{1st}, pupil size{2nd})} `$ 
-* **MEGA_score**: (num) metric for quantifying anticipatory gaze: normalized difference between GAD of 1st and 2nd viewing. computed as: $` \frac{GAD_{1st}-GAD_{2nd}}{max(GAD_{1st}, GAD{2nd})} `$ <br>
+* **pupil_size**: (num) normalized increased pupil dilation due to repeated memory viewing, computed as:  $` \frac{pupil size_{1st}-pupil size_{2nd}}{max(pupil size_{1st}, pupil size_{2nd})} `$ 
+* **MEGA_score**: (num) metric for quantifying anticipatory gaze: normalized difference between GAD of 1st and 2nd viewing. computed as: $` \frac{GAD_{1st}-GAD_{2nd}}{max(GAD_{1st}, GAD_{2nd})} `$ <br>
 * **memorysource**: (chr) categorical value based on participant's responses: **no_memory** (if recognition_accuracy is wrong), **scenery memory** (if recognition_accuracy is correct + what_ or where_accuracy is wrong) and **event memory** if all three are correct (recognition, what & where).
 * **recognition_accuracy**: context recognition according to participant's response (num)
 * **what_accuracy**: object recognition according to participant's response (num)
